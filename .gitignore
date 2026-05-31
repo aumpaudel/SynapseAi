@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# Database
+*.db
+*.sqlite
+
+# Uploads
+uploads/
+
+# Docker
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# virtual env
+venv/
