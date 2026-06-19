@@ -48,14 +48,14 @@ def delete_all_items():
     items_db.clear()  
     return {"message": "All items deleted", "items_remaining": len(items_db)}
 
-@synapse.post("/register")
+@synapse.post("/signup")
 def register_user(request: RegisterRequest):
     db = SessionLocal()
     response = registerUser(db, request.user_id, request.name, request.email, request.password)
     db.close()
     return response
 
-@synapse.get("/authenticate")
+@synapse.get("/login")
 def authenticate_user(identifier: str, password: str):
     db = SessionLocal()
     response = authenticateUser(db, identifier, password)
